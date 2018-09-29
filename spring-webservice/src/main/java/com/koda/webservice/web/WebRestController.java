@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.koda.webservice.domain.posts.PostsRepository;
-import com.koda.webservice.domain.posts.PostsSaveRequestDto;
+import com.koda.webservice.dto.PostsSaveRequestDto;
+import com.koda.webservice.service.PostsService;
 
 import lombok.AllArgsConstructor;
 
@@ -14,7 +15,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class WebRestController {
 	
-	private PostsRepository postsRepository;
+	private PostsService postsService;
 	
 	@GetMapping("/hello")
 	public String hello() {
@@ -22,7 +23,7 @@ public class WebRestController {
 	}
 	
 	@PostMapping("/posts")
-	public void savePosts(@RequestBody PostsSaveRequestDto dto) {
-		postsRepository.save(dto.toEntity());
+	public Long savePosts(@RequestBody PostsSaveRequestDto dto) {
+		return postsService.save(dto);
 	}
 }
