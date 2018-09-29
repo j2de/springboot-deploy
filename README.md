@@ -9,3 +9,4 @@
 - Handlebars
 - BootStrap
 - JQuery
+- AWS
