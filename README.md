@@ -7,3 +7,5 @@
 - Gradle
 - H2
 - Handlebars
+- BootStrap
+- JQuery
