@@ -16,7 +16,6 @@ script: "cd spring-webservice/ && ./gradlew clean build -x test"
 
 # S3 연동
 before_deploy:
-  - cd spring-webservice/
   - zip -r springboot-webservice *
   - mkdir -p deploy
   - mv springboot-webservice.zip deploy/springboot-webservice.zip
@@ -29,7 +28,7 @@ deploy:
     region: ap-northeast-2
     skip_cleanup: true
     acl: public_read
-    local_dir: spring-webservice/deploy
+    local_dir: deploy
     wait-until-deployed: true
     on:
       repo: koda93/spring-boot-webservice #Github 주소
