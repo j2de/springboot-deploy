@@ -16,7 +16,7 @@ script: "cd spring-webservice/ && ./gradlew clean build -x test"
 
 # S3 연동
 before_deploy:
-  - cd spring-webservice
+  - cd spring-webservice/
   - zip -r springboot-webservice *
   - mkdir -p deploy
   - mv springboot-webservice.zip deploy/springboot-webservice.zip
