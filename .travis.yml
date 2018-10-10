@@ -12,13 +12,13 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "cd spring-webservice/ && ./gradlew clean build -x test"
+script: "./gradlew clean build -x test"
 
 # S3 연동
 before_deploy:
-  - zip -r springboot-webservice *
+  - zip -r spring-boot-webservice *
   - mkdir -p deploy
-  - mv springboot-webservice.zip deploy/springboot-webservice.zip
+  - mv spring-boot-webservice.zip deploy/spring-boot-webservice.zip
 
 deploy:
   - provider: s3
