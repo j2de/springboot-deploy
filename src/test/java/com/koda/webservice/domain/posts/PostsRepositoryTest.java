@@ -32,7 +32,7 @@ public class PostsRepositoryTest {
 		postsRepository.save(Posts.builder()
 				.title("테스트 게시글")
 				.content("테스트 본문")
-				.author("kdkyung57@gmail.com")
+				.author("j2de.dev@gmail.com")
 				.build());
 		
 		// when
@@ -51,7 +51,7 @@ public class PostsRepositoryTest {
 		postsRepository.save(Posts.builder()
 				.title("테스트 게시글")
 				.content("테스트 본문")
-				.author("kdkyung57@gmail.com")
+				.author("j2de.dev@gmail.com")
 				.build());
 		
 		// when

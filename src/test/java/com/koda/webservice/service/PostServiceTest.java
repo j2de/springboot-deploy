@@ -33,7 +33,7 @@ public class PostServiceTest {
 	public void Dto데이터가_posts테이블에_저장된다 () {
 		// given
 		PostsSaveRequestDto dto = PostsSaveRequestDto.builder()
-				.author("kdkyung57@gmail.com")
+				.author("j2de.dev@gmail.com")
 				.content("테스트")
 				.title("테스트 타이틀")
 				.build();
